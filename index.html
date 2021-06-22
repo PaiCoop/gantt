@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gantt Chart for PaiCoop Alpha Development</title>
+</head>
+<body>
+<div style="overflow:auto;" class="mermaid">
+gantt
+    dateFormat  YYYY-MM-DD
+    title       Gantt Chart for PaiCoop Alpha Development
+    excludes    weekends
+    %% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week ("sunday") or "weekends", but not the word "weekdays".)
+
+    section Back-end Dev
+    OS运行环境搭建脚本            : bd1, 2021-06-21,2d
+    部署自动化Drone              : bd2, after bd1, 2d
+    搭建RabbitMQ                 : bd3, after bd2, 3d
+    搭建日志服务                  : bd4, after bd3, 1d
+    设计Mongo存储结构             : bd5, after bd4, 1d
+    搭建数据服务                  : bd6, after bd5, 2d
+    搭建邮件服务                  : bd7, after bd6, 1d
+    搭建验证码服务                : bd8, after bd7, 1d
+    搭建API网关                  : bd9, after bd8, 3d
+    搭建客户端sdk                 : bd10, after bd9, 2d
+
+
+
+    section Front-end Dev
+
+
+    section Test
+
+
+    section Management
+
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
